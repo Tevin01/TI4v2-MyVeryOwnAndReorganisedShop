@@ -1,0 +1,92 @@
+[
+    {
+        "nom": "Ordinateur Portable",
+        "prix": 899.99,
+        "description": "Ordinateur portable performant avec 16 Go de RAM et 512 Go de SSD.",
+        "categorie": "Électronique"
+    },
+    {
+        "nom": "Smartphone",
+        "prix": 699.99,
+        "description": "Smartphone avec écran AMOLED et 128 Go de stockage.",
+        "categorie": "Électronique"
+    },
+    {
+        "nom": "Casque Audio",
+        "prix": 199.99,
+        "description": "Casque audio sans fil avec réduction de bruit active.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Montre Connectée",
+        "prix": 249.99,
+        "description": "Montre connectée avec suivi de la santé et notifications.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Tablette",
+        "prix": 329.99,
+        "description": "Tablette avec écran de 10 pouces et 64 Go de stockage.",
+        "categorie": "Électronique"
+    },
+    {
+        "nom": "Enceinte Bluetooth",
+        "prix": 149.99,
+        "description": "Enceinte portable avec une autonomie de 12 heures.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Appareil Photo",
+        "prix": 499.99,
+        "description": "Appareil photo numérique avec capteur de 24 MP.",
+        "categorie": "Électronique"
+    },
+    {
+        "nom": "Imprimante",
+        "prix": 129.99,
+        "description": "Imprimante multifonction avec scanner et photocopieur.",
+        "categorie": "Bureau"
+    },
+    {
+        "nom": "Clavier Mécanique",
+        "prix": 89.99,
+        "description": "Clavier mécanique avec rétroéclairage RGB.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Souris Gaming",
+        "prix": 59.99,
+        "description": "Souris gaming avec capteur optique de haute précision.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Télévision",
+        "prix": 1199.99,
+        "description": "Télévision 4K UHD avec HDR et Smart TV.",
+        "categorie": "Électronique"
+    },
+    {
+        "nom": "Chaise de Bureau",
+        "prix": 149.99,
+        "description": "Chaise ergonomique avec support lombaire.",
+        "categorie": "Bureau"
+    },
+    {
+        "nom": "Lampe de Bureau",
+        "prix": 39.99,
+        "description": "Lampe de bureau LED avec réglage de la luminosité.",
+        "categorie": "Bureau"
+    },
+    {
+        "nom": "Sac à Dos",
+        "prix": 79.99,
+        "description": "Sac à dos avec compartiment pour ordinateur portable.",
+        "categorie": "Accessoires"
+    },
+    {
+        "nom": "Chargeur Portable",
+        "prix": 29.99,
+        "description": "Chargeur portable de 10000 mAh avec deux ports USB.",
+        "categorie": "Accessoires"
+    }
+]

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Articles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .article {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .article h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .article p {
+            margin: 5px 0;
+        }
+        .article .prix {
+            font-weight: bold;
+            color: green;
+        }
+        .article img {
+            max-width: 100%;
+            height: auto;
+        }
+        .article button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .article button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste des Articles</h1>
+    <div id="articles"></div>
+
+    <script>
+        const articles = [
+            {
+                "nom": "Ordinateur Portable",
+                "prix": 899.99,
+                "description": "Ordinateur portable performant avec 16 Go de RAM et 512 Go de SSD.",
+                "categorie": "Électronique",
+                "image": "images\Definition-dun-PC-portable-14-pouces.jpg"
+            },
+            {
+                "nom": "Smartphone",
+                "prix": 699.99,
+                "description": "Smartphone avec écran AMOLED et 128 Go de stockage.",
+                "categorie": "Électronique",
+                "image": "images\purepng.com-asus-smartphonepersonal-computersmartphonemobile-operating-systemcellular-phonephilipsandroid-1701528390817qbpuc.png"
+            },
+            {
+                "nom": "Casque Audio",
+                "prix": 199.99,
+                "description": "Casque audio sans fil avec réduction de bruit active.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/00FF00/000000?text=Casque+Audio"
+            },
+            {
+                "nom": "Montre Connectée",
+                "prix": 249.99,
+                "description": "Montre connectée avec suivi de la santé et notifications.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/FFFF00/000000?text=Montre+Connectée"
+            },
+            {
+                "nom": "Tablette",
+                "prix": 329.99,
+                "description": "Tablette avec écran de 10 pouces et 64 Go de stockage.",
+                "categorie": "Électronique",
+                "image": "https://via.placeholder.com/150/0000FF/FFFFFF?text=Tablette"
+            },
+            {
+                "nom": "Enceinte Bluetooth",
+                "prix": 149.99,
+                "description": "Enceinte portable avec une autonomie de 12 heures.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/FF00FF/FFFFFF?text=Enceinte+Bluetooth"
+            },
+            {
+                "nom": "Appareil Photo",
+                "prix": 499.99,
+                "description": "Appareil photo numérique avec capteur de 24 MP.",
+                "categorie": "Électronique",
+                "image": "https://via.placeholder.com/150/00FFFF/000000?text=Appareil+Photo"
+            },
+            {
+                "nom": "Imprimante",
+                "prix": 129.99,
+                "description": "Imprimante multifonction avec scanner et photocopieur.",
+                "categorie": "Bureau",
+                "image": "https://via.placeholder.com/150/FF0000/000000?text=Imprimante"
+            },
+            {
+                "nom": "Clavier Mécanique",
+                "prix": 89.99,
+                "description": "Clavier mécanique avec rétroéclairage RGB.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/0000FF/FFFFFF?text=Clavier+Mécanique"
+            },
+            {
+                "nom": "Souris Gaming",
+                "prix": 59.99,
+                "description": "Souris gaming avec capteur optique de haute précision.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/00FF00/000000?text=Souris+Gaming"
+            },
+            {
+                "nom": "Télévision",
+                "prix": 1199.99,
+                "description": "Télévision 4K UHD avec HDR et Smart TV.",
+                "categorie": "Électronique",
+                "image": "https://via.placeholder.com/150/FFFF00/000000?text=Télévision"
+            },
+            {
+                "nom": "Chaise de Bureau",
+                "prix": 149.99,
+                "description": "Chaise ergonomique avec support lombaire.",
+                "categorie": "Bureau",
+                "image": "https://via.placeholder.com/150/FF00FF/FFFFFF?text=Chaise+de+Bureau"
+            },
+            {
+                "nom": "Lampe de Bureau",
+                "prix": 39.99,
+                "description": "Lampe de bureau LED avec réglage de la luminosité.",
+                "categorie": "Bureau",
+                "image": "https://via.placeholder.com/150/00FFFF/000000?text=Lampe+de+Bureau"
+            },
+            {
+                "nom": "Sac à Dos",
+                "prix": 79.99,
+                "description": "Sac à dos avec compartiment pour ordinateur portable.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/FF0000/FFFFFF?text=Sac+à+Dos"
+            },
+            {
+                "nom": "Chargeur Portable",
+                "prix": 29.99,
+                "description": "Chargeur portable de 10000 mAh avec deux ports USB.",
+                "categorie": "Accessoires",
+                "image": "https://via.placeholder.com/150/0000FF/FFFFFF?text=Chargeur+Portable"
+            }
+        ];
+
+        const articlesContainer = document.getElementById('articles');
+
+        articles.forEach(article => {
+            const articleDiv = document.createElement('div');
+            articleDiv.classList.add('article');
+
+            articleDiv.innerHTML = `
+                <h2>${article.nom}</h2>
+                <img src="${article.image}" alt="${article.nom}">
+                <p class="prix">Prix: €${article.prix}</p>
+                <p>${article.description}</p>
+                <p>Catégorie: ${article.categorie}</p>
+                <button onclick="ajouterAuPanier('${article.nom}')">Ajouter au panier</button>
+            `;
+
+            articlesContainer.appendChild(articleDiv);
+        });
+
+        function ajouterAuPanier(nom) {
+            alert(`${nom} a été ajouté au panier !`);
+        }
+    </script>
+</body>
+</html>
+
