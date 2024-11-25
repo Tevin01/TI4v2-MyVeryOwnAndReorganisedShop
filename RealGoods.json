@@ -6,13 +6,5 @@
         "description": "Un t-shirt confortable en coton.",
         "quantite": 10,
         "image": "tshirt_blanc.jpg"
-    },
-    {
-        "id": 2,
-        "nom": "Chaussures de sport",
-        "prix": 50,
-        "description": "Des chaussures légères pour la course.",
-        "quantite": 5,
-        "image": "chaussures_sport.jpg"
     }
 ]
